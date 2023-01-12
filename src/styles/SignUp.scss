@@ -1,0 +1,29 @@
+$grey: #8d9bad;
+$white: #ffffffff;
+$darkBlack: #161c24;
+$orange: #fa541c;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.all {
+  background-color: $darkBlack;
+  height: 1010px;
+}
+img {
+  transform: translate(19%, 0%);
+}
+.link {
+  font-family: Poppins-Regular;
+  color: #fa541c;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.link:hover {
+  font-family: Poppins-Regular;
+  color: $orange;
+  text-decoration: underline $orange;
+  font-size: 14px;
+}

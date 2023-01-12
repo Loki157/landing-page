@@ -1,0 +1,118 @@
+<Container fixed>
+    <Grid container>
+      <form onSubmit={formik.handleSubmit}>
+        <Grid item md={12}>
+          <FormControl>
+            <FormLabel>First Name</FormLabel>
+            <TextField
+              name="firstName"
+              variant="outlined"
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              placeholder="FirstName"
+            />
+            {formik.errors.firstName && formik.touched.firstName ? (
+              <Typography
+                variant="h6"
+                sx={{ color: "crimson", fontSize: "15px" }}
+              >
+                {formik.errors.firstName}
+              </Typography>
+            ) : null}
+          </FormControl>
+          <FormControl>
+            <FormLabel>Last Name</FormLabel>
+            <TextField
+              name="lastName"
+              variant="outlined"
+              value={formik.values.lastName}
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              placeholder="LastName"
+            />
+            {formik.errors.lastName && formik.touched.lastName ? (
+              <Typography
+                variant="h6"
+                sx={{ color: "crimson", fontSize: "15px" }}
+              >
+                {formik.errors.lastName}
+              </Typography>
+            ) : null}
+          </FormControl>
+        </Grid>
+        <Grid item md={12}>
+          <FormControl>
+            <FormLabel>Email</FormLabel>
+            <TextField
+              name="email"
+              variant="outlined"
+              value={formik.values.email}
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              placeholder="Email"
+            />
+            {formik.errors.email && formik.touched.email ? (
+              <Typography
+                variant="h6"
+                sx={{ color: "crimson", fontSize: "15px" }}
+              >
+                {formik.errors.email}
+              </Typography>
+            ) : null}
+          </FormControl>
+        </Grid>
+        <FormControl>
+          <FormLabel>Age</FormLabel>
+          <TextField
+            name="age"
+            variant="outlined"
+            value={formik.values.age}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            placeholder="Age"
+          />
+          {formik.errors.age && formik.touched.age ? (
+            <Typography
+              variant="h6"
+              sx={{ color: "crimson", fontSize: "15px" }}
+            >
+              {formik.errors.age}
+            </Typography>
+          ) : null}
+        </FormControl>
+        <FormControl>
+          <FormLabel>Phone Number</FormLabel>
+          <TextField
+            name="num"
+            variant="outlined"
+            value={formik.values.num}
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            placeholder="Phone Number"
+          />
+          {formik.errors.num && formik.touched.num ? (
+            <Typography
+              variant="h6"
+              sx={{ color: "crimson", fontSize: "15px" }}
+            >
+              {formik.errors.num}
+            </Typography>
+          ) : null}
+        </FormControl>
+
+        <Grid item md={12}>
+          <Button
+            sx={{ my: 2, Width: "100%" }}
+            type="submit"
+            variant="contained"
+          >
+            Submit
+          </Button>
+          <IconButton onClick={formik.handleReset}>
+            <RestartAltIcon />
+          </IconButton>
+        </Grid>
+      </form>
+    </Grid>
+  </Container>

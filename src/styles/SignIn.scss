@@ -1,0 +1,26 @@
+$grey: #8d9bad;
+$white: #ffffffff;
+$darkBlack: #161c24;
+$orange: #fa541c;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.all {
+  background-color: $darkBlack;
+  height: 910px;
+}
+.illus {
+  transform: translate(19%, 0%);
+  // filter: blur(10px);
+  animation: 0.3s illustration ease-in-out;
+}
+@keyframes illustration {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
