@@ -13,6 +13,15 @@ $orange: #fa541c;
 }
 img {
   transform: translate(19%, 0%);
+  animation: 0.3s illustration ease-in-out;
+}
+@keyframes illustration {
+  from {
+    filter: blur(30px);
+  }
+  to {
+    filter: blur(0);
+  }
 }
 .link {
   font-family: Poppins-Regular;

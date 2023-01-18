@@ -16,33 +16,91 @@ $orange: #fa541c;
   height: 100%;
   width: 100%;
   padding: 25px 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+.head-login {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  background-color: $darkBlack;
+  height: 100%;
+  width: 100%;
+  padding: 25px 0;
+  padding-left: 60px;
+  padding-right: 60px;
   top: 0;
   z-index: 9999;
   transition: all 0.3s ease-in-out;
 }
 .shrink {
+  position: sticky;
   padding: 20px 0;
-
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: rgba(22, 28, 36, 0.9);
   //background-color: aqua;
 }
-ul {
+nav {
   width: 50%;
   margin: 0;
   display: flex;
   flex-direction: row;
   //   align-items: flex-end;
-  justify-content: space-around;
+  // justify-content: space-around;
   //   text-align: center;
 }
-ul li {
+.support {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Poppins-Regular;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.support:hover {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Poppins-Regular;
+  text-decoration: underline #ffffff;
+}
+nav a {
   z-index: 9999;
   padding-top: 5px;
-  color: $white;
-  font-family: Poppins-Regular;
-  list-style-type: none;
+  color: $grey;
+  font-family: Poppins-Medium;
+  font-size: 14px;
+  text-decoration: none;
+  // list-style-type: none;
   //   display: inline-block;
-  padding-left: 10px;
+  padding-left: 30px;
+}
+nav a.active::before {
+  top: 37px;
+  width: 6px;
+  height: 6px;
+  bottom: 0px;
+  // left: 165px;
+  content: "";
+  transform: translateX(-180%);
+  display: block;
+  // padding-right: px;
+  // margin: auto 0px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgb(250, 84, 28);
+}
+nav a.active {
+  color: #ffffffff;
 }
 
 .btnGrp {
@@ -51,6 +109,7 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  // margin-right: 20px;
   .signin:hover {
     background-color: $darkBlack;
     color: $white;

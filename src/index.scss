@@ -5,11 +5,15 @@ $orange: #fa541c;
 html {
   scroll-behavior: smooth;
   height: 100%;
+  position: relative;
+  // overflow: unset;
 }
 body {
   margin: 0;
-  background: #ffffff;
+  background: $darkBlack;
+  min-height: 100vh;
   height: 100%;
+  display: block;
   padding: 0;
   box-sizing: border-box;
 }
@@ -28,4 +32,20 @@ body {
 @font-face {
   font-family: "Poppins-Thin";
   src: url("./font/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: "Barlow-Medium";
+  src: url("./font/Barlow-Medium.ttf");
+}
+@font-face {
+  font-family: "Barlow-SemiBold";
+  src: url("./font/Barlow-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Bold";
+  src: url("./font/Barlow-Bold.ttf");
+}
+@font-face {
+  font-family: "Barlow-Black";
+  src: url("./font/Barlow-Black.ttf");
 }

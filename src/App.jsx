@@ -6,6 +6,9 @@ import Header from "./components/Header";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import { AllRoutingData } from "./components/RoutingDatas";
+import ForgotPassword from "./components/ForgotPassword";
+import Pages from "./components/Pages";
+import Documentation from "./components/Documentation";
 function App() {
   // window.onscroll = function () {
 
@@ -26,12 +29,15 @@ function App() {
 
   return (
     <>
+      {/* <Header /> */}
       <div>
-        <Header />
         <Routes>
           <Route path={AllRoutingData.HOME} element={<Content />} />
           <Route path={AllRoutingData.SIGNIN} element={<SignIn />} />
           <Route path={AllRoutingData.SIGNUP} element={<SignUp />} />
+          <Route path={AllRoutingData.FORGOT} element={<ForgotPassword />} />
+          <Route path={AllRoutingData.PAGES} element={<Pages />} />
+          <Route path={AllRoutingData.DOCUMENT} element={<Documentation />} />
         </Routes>
       </div>
     </>

@@ -22,6 +22,7 @@ import { Box } from "@mui/system";
 import { useFormik } from "formik";
 import "../styles/SignIn.scss";
 import { Link } from "react-router-dom";
+import LoginRegisterCover from "./LoginRegisterCover";
 // import { formik } from "./components/FormikData";
 function SignIn() {
   const formik = useFormik({
@@ -65,6 +66,7 @@ function SignIn() {
   });
   return (
     <>
+      <LoginRegisterCover />
       <div className="all">
         <Grid sx={{ transform: "translate(0%,20%)" }} container md={12}>
           <Grid item md={8}>
@@ -90,7 +92,7 @@ function SignIn() {
               <form onSubmit={formik.handleSubmit}>
                 <p
                   style={{
-                    fontFamily: "Poppins-Regular",
+                    fontFamily: "Barlow-Bold",
                     color: "#ffffff",
                     fontSize: "26px",
                   }}
@@ -105,14 +107,7 @@ function SignIn() {
                   }}
                 >
                   Don't Have An Account?{" "}
-                  <Link
-                    style={{
-                      fontFamily: "Poppins-Regular",
-                      color: "#ffffff",
-                      fontSize: "14px",
-                    }}
-                    to={AllRoutingData.SIGNUP}
-                  >
+                  <Link className="link" to={AllRoutingData.SIGNUP}>
                     Get Started
                   </Link>{" "}
                 </p>
@@ -205,7 +200,7 @@ function SignIn() {
                     fontSize: "14px",
                     float: "right",
                   }}
-                  to={AllRoutingData.SIGNUP}
+                  to={AllRoutingData.FORGOT}
                 >
                   Forgot Password?
                 </Link>

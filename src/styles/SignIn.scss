@@ -24,3 +24,16 @@ $orange: #fa541c;
     filter: blur(0);
   }
 }
+.link {
+  font-family: Poppins-Regular;
+  color: #fa541c;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.link:hover {
+  font-family: Poppins-Regular;
+  color: $orange;
+  text-decoration: underline $orange;
+  font-size: 14px;
+}

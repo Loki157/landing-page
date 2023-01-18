@@ -22,6 +22,7 @@ import { Box } from "@mui/system";
 import { useFormik } from "formik";
 import "../styles/SignUp.scss";
 import { Link } from "react-router-dom";
+import LoginRegisterCover from "./LoginRegisterCover";
 // import { formik } from "./components/FormikData";
 function SignUp() {
   const formik = useFormik({
@@ -65,6 +66,7 @@ function SignUp() {
   });
   return (
     <>
+      <LoginRegisterCover />
       <div className="all">
         <Grid sx={{ transform: "translate(0%,20%)" }} container md={12}>
           <Grid item md={8}>
@@ -87,7 +89,7 @@ function SignUp() {
               <form onSubmit={formik.handleSubmit}>
                 <p
                   style={{
-                    fontFamily: "Poppins-Regular",
+                    fontFamily: "Barlow-Bold",
                     color: "#ffffff",
                     fontSize: "26px",
                   }}
